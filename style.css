@@ -1,0 +1,172 @@
+/* Reset de margens e preenchimento para o corpo da página */
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    background-color: #E8E6DA;
+}
+
+/* Estilo cabeçalho */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #011045;
+    color: #fff;
+    padding: .8rem; 
+    box-shadow: 5px 5px 10px #000000;
+}
+
+
+.logo {
+    width: 26rem; 
+    display: flex;
+    align-items: center;
+}
+
+.logo-image{
+    width: 12rem;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+
+.name {
+    font-size: 1.5rem; 
+    margin-right: 2rem;
+}
+
+
+.contact-button {
+    color: #FFFFFF;
+    padding: .5rem;
+    text-decoration: none;
+    margin-right: 1rem;
+    border-radius: 0.5rem; 
+}
+
+
+.contact-buttons {
+    text-align: left;
+}
+
+/* Estilizando a divisão e as fotos */
+main {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5rem;
+    flex-direction: column;
+}
+
+.section {
+    display: block;
+    width: 100%;
+    clear: both;
+    overflow: hidden;
+    padding: 20px;
+    margin-bottom: 10rem;
+    
+}
+
+
+.image img{
+    width: 26rem;
+    box-shadow: 3px 3px 5px #000000;
+}
+
+.text-right {
+    float: right;
+    margin: 0;
+    text-align: justify;
+}
+
+.textos{
+    padding: 0 2rem;
+    width: 22rem;
+}
+
+.conteudo{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.text-left {
+    float: left;
+    margin: 0;
+    text-align: justify;
+}
+
+.texto-titulo{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.section:first-child .text {
+    float: right;
+    margin: 0;
+}
+
+.section:last-child .text {
+    float: right;
+    margin: 0;
+}
+
+/* Estilo o rodapé */
+.footer {
+    background-color: #011045;
+    color: #fff;
+    padding: 1rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.contact-info {
+    text-align: left;
+}
+
+
+.social-links {
+    text-align: right;
+}
+
+
+.social-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+
+
+.copyright {
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.8rem;
+}
+
+
+/* Estilos para tornar o cabeçalho responsivo */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .name {
+        margin: 1rem 0;
+    }
+
+    .contact-buttons {
+        margin-top: 1rem;
+    }
+}
