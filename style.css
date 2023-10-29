@@ -132,6 +132,7 @@ main {
 
 .contact-info {
     text-align: left;
+    padding: 1rem;
 }
 
 
@@ -150,7 +151,6 @@ main {
 
 .copyright {
     text-align: center;
-    padding: 1rem 0;
     font-size: 0.8rem;
 }
 
