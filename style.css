@@ -1,10 +1,13 @@
 /* Reset de margens e preenchimento para o corpo da página */
+@import url('https://fonts.googleapis.com/css2?family=Faster+One&family=Gruppo&family=Titillium+Web:wght@600&display=swap');
+
+
 body {
     margin: 0;
     padding: 0;
     font-size: 16px;
-    font-family: Arial, sans-serif;
-    background-color: #E8E6DA;
+    width: 100%;
+    font-family: 'Titillium Web';
 }
 
 /* Estilo cabeçalho */
@@ -12,15 +15,20 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #011045;
+    background-color: rgba(1, 22, 69, 0.8);
     color: #fff;
     padding: .8rem; 
-    box-shadow: 5px 5px 10px #000000;
+    box-shadow: 0px 0px 15px #000000;
 }
 
+.icons__header{
+    width: 1.5rem;
+    height: auto;
+    margin-right: 0.5rem;
+}
 
 .logo {
-    width: 26rem; 
+    width: 50%; 
     display: flex;
     align-items: center;
 }
@@ -32,56 +40,104 @@ body {
 .header-content {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
 }
 
 
 .name {
-    font-size: 1.5rem; 
+    font-size: 2rem; 
     margin-right: 2rem;
+    /* font-family: 'Faster One'; */
 }
 
+.button{
+    display: flex;
+    text-align: center;
+    padding: .5rem;
+    align-items: center;
+}
+
+.button:hover{
+    filter: drop-shadow(3px 3px 2px #000000);
+}
+.contact-button:hover{
+    color: #0122f2;
+}
 
 .contact-button {
     color: #FFFFFF;
-    padding: .5rem;
     text-decoration: none;
     margin-right: 1rem;
-    border-radius: 0.5rem; 
 }
 
 
 .contact-buttons {
     text-align: left;
+    display: flex;
+}
+
+.video__main{
+    display: flex;
+    justify-content: center;
+
+}
+
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover; /* Cobrir toda a área do contêiner */
+    z-index: -1; /* Coloca o vídeo atrás do conteúdo */
 }
 
 /* Estilizando a divisão e as fotos */
 main {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     padding: 5rem;
     flex-direction: column;
 }
 
+
 .section {
     display: block;
-    width: 100%;
     clear: both;
     overflow: hidden;
-    padding: 20px;
     margin-bottom: 10rem;
+    box-shadow: 5px 5px 15px #000000;
     
 }
 
-
-.image img{
+.content__image img{
     width: 26rem;
-    box-shadow: 3px 3px 5px #000000;
+    height: 100%;
+    border-left: 2px solid #000000;
+    border-right: 2px solid #000000;
+    overflow: hidden;
+}
+
+.image{
+    width: calc(100% - 40px);
+    transition: transform 0.3s ease;
+}
+
+.content__image:hover .image{
+    transform: scale(1.2);
 }
 
 .text-right {
+    
+    margin: 0 2rem;
     float: right;
-    margin: 0;
+    text-align: justify;
+}
+
+.text-left {
+    margin: 0 2rem;
+    float: left;
     text-align: justify;
 }
 
@@ -89,23 +145,27 @@ main {
     padding: 0 2rem;
     width: 22rem;
 }
-
+.section__content{
+    margin-top: 2rem;
+}
 .conteudo{
     display: flex;
-    justify-content: space-evenly;
+    
+    justify-content: space-between;
+    background-color: rgba(1, 22, 69, 0.8);
+    box-shadow: 3px 3px 5px #000000;
+    color: #FFFFFF;
 }
 
 .conteudo-mid{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    background-color: rgba(1, 22, 69, 0.8);
+    box-shadow: 3px 3px 5px #000000;
+    color: #FFFFFF;
     
 }
 
-.text-left {
-    float: left;
-    margin: 0;
-    text-align: justify;
-}
 
 .texto-titulo{
     font-size: 1.5rem;
@@ -124,9 +184,12 @@ main {
 
 /* Estilo o rodapé */
 .footer {
-    background-color: #011045;
+    background-color: rgba(1, 22, 69, 0.8);
     color: #fff;
     padding: 1rem;
+    background-image: url(images/footer-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .footer-content {
@@ -137,8 +200,11 @@ main {
 
 
 .contact-info {
-    text-align: left;
+    display: flex;
+    text-align: center;
     padding: 1rem;
+    width: 100%;
+    justify-content: space-evenly;
 }
 
 
@@ -157,7 +223,9 @@ main {
 
 .copyright {
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 1rem;
+    filter: drop-shadow(1px 1px 3px #000000);
+
 }
 
 
@@ -205,7 +273,10 @@ main {
     }
 
     main{
-        padding: .5rem;
+        padding: 1rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 
     .conteudo{
@@ -217,14 +288,33 @@ main {
     .conteudo-mid{
         align-items: center;
         flex-direction: column-reverse;
+
     }
 
-    .image img{
-        width: 22rem;
+    .content__image img{
+        width: 100%;
     }
 
     .textos{
-        padding: 0;
+        padding: 1rem;
     }
+
+    .text-left,
+    .text-right{
+        width: 100%;
+        float: none;
+    }
+
+    video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Cobrir toda a área do contêiner */
+        z-index: -1; /* Coloca o vídeo atrás do conteúdo */
+    }
+
+   
   }
     
