@@ -129,13 +129,14 @@ main {
 }
 
 .text-right {
-    
+    font-size: .9rem;
     margin: 0 2rem;
     float: right;
     text-align: justify;
 }
 
 .text-left {
+    font-size: 1rem;
     margin: 0 2rem;
     float: left;
     text-align: justify;
