@@ -35,6 +35,7 @@ body {
 
 .logo-image{
     width: 12rem;
+    filter: drop-shadow(3px 3px 5px #000000);
 }
 
 .header-content {
